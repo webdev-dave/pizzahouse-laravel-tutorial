@@ -2,22 +2,25 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+//import the Pizza Model
+use App\Models\Pizza;
+
 
 class PizzaController extends Controller
 {
     public function index()
     {
         //1. get data from database
+        $pizzas = Pizza::all();
+        //$pizzas = Pizza::orderBy('name')->get();
+        //$pizzas = Pizza::where('type', 'hawaiian')->get();
+        //$pizzas = Pizza::latest()->get();
         //2. then pass the data into the view (page) via an array of key-value pairs
-        $pizzas = [
-            ['type' => 'hawaiian', 'base' => 'cheesy crust', 'price' => 10],
-            ['type' => 'volcano', 'base' => 'garlic crust', 'price' => 10],
-            ['type' => 'veg supreme', 'base' => 'thin and crispy', 'price' => 10]
-        ];
+
 
         //access query parameters using request()
 
-        return view('pizzas', ['pizzas' => $pizzas, 'name' => request('name'), 'age' => request('age')]);
+        return view('pizzas', ['pizzas' => $pizzas]);
     }
 
     public function show($id)
