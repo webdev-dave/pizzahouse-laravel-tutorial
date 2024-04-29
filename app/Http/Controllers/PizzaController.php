@@ -18,14 +18,19 @@ class PizzaController extends Controller
         //2. then pass the data into the view (page) via an array of key-value pairs
 
 
-        //access query parameters using request()
+        //you can access query parameters using request()
 
-        return view('pizzas', ['pizzas' => $pizzas]);
+        return view('pizzas.index', ['pizzas' => $pizzas]);
     }
 
     public function show($id)
     {
-        //use the $id variable to query the db for a record...
-        return view('details', ['id' => $id]);
+        //use the $id variable to query the db for a record.
+        //Then...
+        return view('pizzas.show', ['id' => $id]);
+    }
+
+    public function create (){
+       return view('pizzas.create'); 
     }
 }
