@@ -17,7 +17,7 @@
             <label for="base">Choose pizza type:</label>
             <select name="base" id="type">
                 <option value="cheesy crust">Cheesy Crust</option>
-                <option value="garlic crust">Carlic Crust</option>
+                <option value="garlic crust">Garlic Crust</option>
                 <option value="thin & crispy">Thin & Crispy</option>
                 <option value="thick">Thick</option>
             </select>
