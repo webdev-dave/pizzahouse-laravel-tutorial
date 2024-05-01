@@ -8,6 +8,8 @@ use App\Models\Pizza;
 
 class PizzaController extends Controller
 {
+
+
     public function index()
     {
         //1. get data from database
