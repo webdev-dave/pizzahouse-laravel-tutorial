@@ -10,7 +10,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <!-- Styles -->
-    @vite(['resources/css/app.css', 'resources/scss/app.scss', 'resources/css/main.css', 'resources/scss/main.scss'])
+    @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/css/main.css', 'resources/sass/main.scss'])
     {{-- <link rel="stylesheet" href="/css/main.css"> --}}
 </head>
 
